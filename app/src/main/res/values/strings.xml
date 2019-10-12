@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fee Calculator</string>
+    <string-array name="type_payer_array">
+        <item>student</item>
+        <item>donor</item>
+    </string-array>
+</resources>

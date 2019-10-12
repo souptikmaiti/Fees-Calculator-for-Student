@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.feecalculator.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_dueFragment"
+            app:destination="@id/dueFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newStudentFragment"
+            app:destination="@id/newStudentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_receiptFragment"
+            app:destination="@id/receiptFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newStudentFragment"
+        android:name="com.example.feecalculator.ui.NewStudentFragment"
+        android:label="fragment_new_student"
+        tools:layout="@layout/fragment_new_student" >
+        <action
+            android:id="@+id/action_newStudentFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiptFragment"
+        android:name="com.example.feecalculator.ui.ReceiptFragment"
+        android:label="fragment_receipt"
+        tools:layout="@layout/fragment_receipt" >
+        <action
+            android:id="@+id/action_receiptFragment_to_dueFragment"
+            app:destination="@id/dueFragment" />
+        <action
+            android:id="@+id/action_receiptFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dueFragment"
+        android:name="com.example.feecalculator.ui.DueFragment"
+        android:label="fragment_due"
+        tools:layout="@layout/fragment_due" >
+        <action
+            android:id="@+id/action_dueFragment_to_detailsDueFragment"
+            app:destination="@id/detailsDueFragment" />
+        <action
+            android:id="@+id/action_dueFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsDueFragment"
+        android:name="com.example.feecalculator.ui.DetailsDueFragment"
+        android:label="fragment_details_due"
+        tools:layout="@layout/fragment_details_due" >
+        <action
+            android:id="@+id/action_detailsDueFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
